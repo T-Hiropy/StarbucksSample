@@ -1,0 +1,92 @@
+/* テンプレート　--------------------------- */
+
+@media (max-width:1024px){
+
+}
+
+@media (min-width:1025px){
+  
+}
+
+/* commons　--------------------------- */
+
+body{
+  font-family: "Noto Sans JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width:1024px){
+
+}
+
+@media (min-width:1025px){
+  
+}
+
+/* header　--------------------------- */
+
+@media (max-width:1024px){
+
+}
+
+@media (min-width:1025px){
+  .site-header,
+  .nav-global,
+  .nav-global-list,
+  .nav-global-item,
+  .nav-global-item > a,
+  .nav-global-item > button{
+    display: flex;
+  }
+
+  .site-logo{
+    margin: 30px;
+  }
+
+  .nav-global{
+    flex: 1;
+
+  }
+
+  .nav-global-list.contents{
+    margin-right: auto;    
+  }
+
+
+  .nav-global-item{
+    align-items: stretch;
+    margin-inline: 20px;
+    font-weight: 700;
+    font-size: 14px
+  }
+
+  .brands > .nav-global-item{
+    border-left: 1px solid #eee;
+    margin-inline: 0;
+    width: 150px;
+  }
+
+  .nav-global-item > a,
+  .nav-global-item > button{
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+}
+
+/* utils　--------------------------- */
+
+@media (max-width:1024px){
+  .hidden-on-mobile{
+    display: none;
+  }
+}
+
+@media (min-width:1025px){
+  .hidden-on-pc{
+    display: none;
+  }
+}
