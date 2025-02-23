@@ -28,7 +28,117 @@ body{
 /* header　--------------------------- */
 
 @media (max-width:1024px){
+  .site-header,
+  .nav-mobile,
+  .nav-mobile-list,
+  .nav-global,
+  .nav-global-list,
+  .nav-global-item,
+  .nav-global-item > .hamburger{
+    display: flex;
+  }
 
+  .site-header{
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 2px solid #DDD;
+  }
+
+  .site-logo-img{
+    width: 40px;
+    margin-block: 12px;
+    margin-left: 16px;
+  }
+
+  .nav-mobile-list > .nav-global-item{
+    align-items: stretch;
+    padding-inline: 15px;
+  }
+  .nav-mobile-list > .nav-global-item > .hamburger{
+    width: 25px;
+    height: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+  }
+  .nav-mobile-list > .nav-global-item > .hamburger > .hamburger-line{
+    display: block;
+    width: auto;
+    height: 3px;
+    background-color: black;
+  }
+
+  .nav-mobile-list > .nav-global-item > a,
+  .nav-mobile-list > .nav-global-item > button{
+    display: flex;
+    flex: 1;
+  }
+
+  /* ナビゲーションメニュー */
+  .site-header > .nav-global{
+    flex-direction: column;
+    background-color: #fff;
+    position: fixed;
+    left: 15%;
+    top: 66px;
+    width: 85%;
+    height: 100%;
+    display: none;
+    padding: 20px 20px;
+    z-index: 100;
+  }
+  .nav-global-list{
+    flex-direction: column;
+  }
+  .nav-global-list.contents{
+    font-weight: bold;
+    border-bottom: 2px solid #DDD;
+    padding-bottom: 20px;
+  }
+  .contents > .nav-global-item{
+    background-image: url("picture/arrow2.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-block: 20px;
+  }
+  .nav-global-list.icons{
+    font-weight: bold;
+    border-bottom: 2px solid #DDD;
+    padding-block: 20px;
+  }
+  .icons > .nav-global-item{
+    padding-block: 10px;
+  }
+  .icons > .nav-global-item > button,
+  .icons > .nav-global-item > a{
+    display: flex;
+    width: 100%;
+  }
+  .icons > .nav-global-item > button{
+    background-image: url("picture/arrow2.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  .icons > .nav-global-item img{
+    transform: scale(1);
+    transform-origin: center;
+    width: 40px;
+    height: 25px;
+  }
+  .icons > .nav-global-item span{
+    align-self: center;
+  }
+
+  .nav-global-list.brands{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-block: 40px;
+  }
+  .brands > .nav-global-item{
+    margin-inline: 30px;
+  }
 }
 
 @media (min-width:1025px){
@@ -42,12 +152,12 @@ body{
   }
 
   .site-logo{
-    margin: 30px;
+    margin-block: 20px;
+    margin-inline: 40px;
   }
 
   .nav-global{
     flex: 1;
-
   }
 
   .nav-global-list.contents{
@@ -65,7 +175,7 @@ body{
   .brands > .nav-global-item{
     border-left: 1px solid #eee;
     margin-inline: 0;
-    width: 150px;
+    width: 140px;
   }
 
   .nav-global-item > a,
